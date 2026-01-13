@@ -15,6 +15,7 @@ export interface IStorage {
   createSite(site: any): Promise<Site>;
   createSwitch(sw: any): Promise<Switch>;
   createAccessPoint(ap: any): Promise<AccessPoint>;
+  updateSite(id: number, updates: Partial<any>): Promise<Site | undefined>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -29,7 +30,6 @@ export class DatabaseStorage implements IStorage {
     const siteSwitches = await db.select().from(switches).where(eq(switches.siteId, id));
     const siteAPs = await db.select().from(accessPoints).where(eq(accessPoints.siteId, id));
 
-    // Combine for the rich response
     const switchesWithAPs = siteSwitches.map(sw => ({
       ...sw,
       accessPoints: siteAPs.filter(ap => ap.switchId === sw.id)
@@ -46,7 +46,6 @@ export class DatabaseStorage implements IStorage {
     const lowerQuery = `%${query.toLowerCase()}%`;
     const results: Array<{ id: number, type: 'site' | 'switch' | 'ap', name: string, detail: string, siteId: number }> = [];
 
-    // Search Sites
     const foundSites = await db.select().from(sites).where(
       or(
         like(sites.name, lowerQuery),
@@ -58,7 +57,6 @@ export class DatabaseStorage implements IStorage {
     
     foundSites.forEach(s => results.push({ id: s.id, type: 'site', name: s.name, detail: s.address, siteId: s.id }));
 
-    // Search Switches
     const foundSwitches = await db.select().from(switches).where(
       or(
         like(switches.name, lowerQuery),
@@ -69,7 +67,6 @@ export class DatabaseStorage implements IStorage {
 
     foundSwitches.forEach(s => results.push({ id: s.id, type: 'switch', name: s.name, detail: s.ip, siteId: s.siteId }));
 
-    // Search APs
     const foundAPs = await db.select().from(accessPoints).where(
       or(
         like(accessPoints.name, lowerQuery),
@@ -94,6 +91,11 @@ export class DatabaseStorage implements IStorage {
   async createAccessPoint(ap: any): Promise<AccessPoint> {
     const [newAp] = await db.insert(accessPoints).values(ap).returning();
     return newAp;
+  }
+
+  async updateSite(id: number, updates: Partial<any>): Promise<Site | undefined> {
+    const [updated] = await db.update(sites).set(updates).where(eq(sites.id, id)).returning();
+    return updated;
   }
 }
 

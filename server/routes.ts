@@ -121,6 +121,55 @@ export async function registerRoutes(
     res.json(site);
   });
 
+  app.post(api.sites.create.path, async (req, res) => {
+    try {
+      const { site, switches: sws, accessPoints: aps } = api.sites.create.input.parse(req.body);
+      
+      const newSite = await storage.createSite(site);
+      
+      const createdSwitches = [];
+      for (const sw of sws) {
+        const newSw = await storage.createSwitch({ ...sw, siteId: newSite.id });
+        createdSwitches.push(newSw);
+      }
+      
+      for (const ap of aps) {
+        const sw = createdSwitches[ap.switchIndex];
+        await storage.createAccessPoint({
+          name: ap.name,
+          ip: ap.ip,
+          mac: ap.mac,
+          model: ap.model,
+          status: ap.status,
+          siteId: newSite.id,
+          switchId: sw.id
+        });
+      }
+      
+      res.status(201).json(newSite);
+    } catch (err) {
+      if (err instanceof z.ZodError) {
+        return res.status(400).json({ message: err.errors[0].message });
+      }
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.patch(api.sites.update.path, async (req, res) => {
+    try {
+      const id = Number(req.params.id);
+      const updates = api.sites.update.input.parse(req.body);
+      const updated = await storage.updateSite(id, updates);
+      if (!updated) return res.status(404).json({ message: "Site not found" });
+      res.json(updated);
+    } catch (err) {
+      if (err instanceof z.ZodError) {
+        return res.status(400).json({ message: err.errors[0].message });
+      }
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
   app.get(api.search.global.path, async (req, res) => {
     const query = req.query.q as string;
     if (!query || query.length < 2) return res.json([]);

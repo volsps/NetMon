@@ -31,6 +31,30 @@ export const api = {
         404: errorSchemas.notFound,
       },
     },
+    create: {
+      method: 'POST' as const,
+      path: '/api/sites',
+      input: z.object({
+        site: insertSiteSchema,
+        switches: z.array(insertSwitchSchema.omit({ siteId: true })),
+        accessPoints: z.array(insertAccessPointSchema.omit({ siteId: true, switchId: true }).extend({
+          switchIndex: z.number() // Index in the switches array above
+        }))
+      }),
+      responses: {
+        201: z.custom<typeof sites.$inferSelect>(),
+        400: errorSchemas.validation,
+      },
+    },
+    update: {
+      method: 'PATCH' as const,
+      path: '/api/sites/:id',
+      input: insertSiteSchema.partial(),
+      responses: {
+        200: z.custom<typeof sites.$inferSelect>(),
+        404: errorSchemas.notFound,
+      },
+    }
   },
   search: {
     global: {
@@ -44,7 +68,7 @@ export const api = {
           id: z.number(),
           type: z.enum(['site', 'switch', 'ap']),
           name: z.string(),
-          detail: z.string(), // IP, Address, etc.
+          detail: z.string(),
           siteId: z.number(),
         })),
       },
