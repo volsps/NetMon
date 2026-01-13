@@ -16,6 +16,8 @@ export interface IStorage {
   createSwitch(sw: any): Promise<Switch>;
   createAccessPoint(ap: any): Promise<AccessPoint>;
   updateSite(id: number, updates: Partial<any>): Promise<Site | undefined>;
+  updateSwitch(id: number, updates: Partial<any>): Promise<Switch | undefined>;
+  updateAP(id: number, updates: Partial<any>): Promise<AccessPoint | undefined>;
 }
 
 export class DatabaseStorage implements IStorage {
@@ -95,6 +97,16 @@ export class DatabaseStorage implements IStorage {
 
   async updateSite(id: number, updates: Partial<any>): Promise<Site | undefined> {
     const [updated] = await db.update(sites).set(updates).where(eq(sites.id, id)).returning();
+    return updated;
+  }
+
+  async updateSwitch(id: number, updates: Partial<any>): Promise<Switch | undefined> {
+    const [updated] = await db.update(switches).set(updates).where(eq(switches.id, id)).returning();
+    return updated;
+  }
+
+  async updateAP(id: number, updates: Partial<any>): Promise<AccessPoint | undefined> {
+    const [updated] = await db.update(accessPoints).set(updates).where(eq(accessPoints.id, id)).returning();
     return updated;
   }
 }

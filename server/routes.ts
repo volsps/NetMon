@@ -170,6 +170,36 @@ export async function registerRoutes(
     }
   });
 
+  app.patch(api.sites.updateSwitch.path, async (req, res) => {
+    try {
+      const id = Number(req.params.id);
+      const updates = api.sites.updateSwitch.input.parse(req.body);
+      const updated = await storage.updateSwitch(id, updates);
+      if (!updated) return res.status(404).json({ message: "Switch not found" });
+      res.json(updated);
+    } catch (err) {
+      if (err instanceof z.ZodError) {
+        return res.status(400).json({ message: err.errors[0].message });
+      }
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
+  app.patch(api.sites.updateAP.path, async (req, res) => {
+    try {
+      const id = Number(req.params.id);
+      const updates = api.sites.updateAP.input.parse(req.body);
+      const updated = await storage.updateAP(id, updates);
+      if (!updated) return res.status(404).json({ message: "Access point not found" });
+      res.json(updated);
+    } catch (err) {
+      if (err instanceof z.ZodError) {
+        return res.status(400).json({ message: err.errors[0].message });
+      }
+      res.status(500).json({ message: "Internal server error" });
+    }
+  });
+
   app.get(api.search.global.path, async (req, res) => {
     const query = req.query.q as string;
     if (!query || query.length < 2) return res.json([]);

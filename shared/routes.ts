@@ -54,6 +54,24 @@ export const api = {
         200: z.custom<typeof sites.$inferSelect>(),
         404: errorSchemas.notFound,
       },
+    },
+    updateSwitch: {
+      method: 'PATCH' as const,
+      path: '/api/switches/:id',
+      input: insertSwitchSchema.partial(),
+      responses: {
+        200: z.custom<typeof switches.$inferSelect>(),
+        404: errorSchemas.notFound,
+      },
+    },
+    updateAP: {
+      method: 'PATCH' as const,
+      path: '/api/access_points/:id',
+      input: insertAccessPointSchema.partial(),
+      responses: {
+        200: z.custom<typeof accessPoints.$inferSelect>(),
+        404: errorSchemas.notFound,
+      },
     }
   },
   search: {
