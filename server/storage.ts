@@ -10,14 +10,15 @@ export interface IStorage {
   getAllSites(): Promise<Site[]>;
   getSiteDetails(id: number): Promise<SiteWithDetails | undefined>;
   searchGlobal(query: string): Promise<Array<{ id: number, type: 'site' | 'switch' | 'ap', name: string, detail: string, siteId: number }>>;
-  
-  // Seeding methods
   createSite(site: any): Promise<Site>;
   createSwitch(sw: any): Promise<Switch>;
   createAccessPoint(ap: any): Promise<AccessPoint>;
   updateSite(id: number, updates: Partial<any>): Promise<Site | undefined>;
   updateSwitch(id: number, updates: Partial<any>): Promise<Switch | undefined>;
   updateAP(id: number, updates: Partial<any>): Promise<AccessPoint | undefined>;
+  deleteSite(id: number): Promise<void>;
+  deleteSwitch(id: number): Promise<void>; // Добавили
+  deleteAP(id: number): Promise<void>;     // Добавили
 }
 
 export class DatabaseStorage implements IStorage {
@@ -28,57 +29,20 @@ export class DatabaseStorage implements IStorage {
   async getSiteDetails(id: number): Promise<SiteWithDetails | undefined> {
     const site = await db.select().from(sites).where(eq(sites.id, id)).then(res => res[0]);
     if (!site) return undefined;
-
     const siteSwitches = await db.select().from(switches).where(eq(switches.siteId, id));
     const siteAPs = await db.select().from(accessPoints).where(eq(accessPoints.siteId, id));
-
     const switchesWithAPs = siteSwitches.map(sw => ({
       ...sw,
       accessPoints: siteAPs.filter(ap => ap.switchId === sw.id)
     }));
-
-    return {
-      ...site,
-      switches: switchesWithAPs,
-      accessPoints: siteAPs
-    };
+    return { ...site, switches: switchesWithAPs, accessPoints: siteAPs };
   }
 
-  async searchGlobal(query: string): Promise<Array<{ id: number, type: 'site' | 'switch' | 'ap', name: string, detail: string, siteId: number }>> {
+  async searchGlobal(query: string): Promise<any[]> {
     const lowerQuery = `%${query.toLowerCase()}%`;
-    const results: Array<{ id: number, type: 'site' | 'switch' | 'ap', name: string, detail: string, siteId: number }> = [];
-
-    const foundSites = await db.select().from(sites).where(
-      or(
-        like(sites.name, lowerQuery),
-        like(sites.address, lowerQuery),
-        like(sites.routerIp, lowerQuery),
-        like(sites.routerMac, lowerQuery)
-      )
-    ).limit(5);
-    
+    const results: any[] = [];
+    const foundSites = await db.select().from(sites).where(or(like(sites.name, lowerQuery), like(sites.address, lowerQuery))).limit(5);
     foundSites.forEach(s => results.push({ id: s.id, type: 'site', name: s.name, detail: s.address, siteId: s.id }));
-
-    const foundSwitches = await db.select().from(switches).where(
-      or(
-        like(switches.name, lowerQuery),
-        like(switches.ip, lowerQuery),
-        like(switches.mac, lowerQuery)
-      )
-    ).limit(5);
-
-    foundSwitches.forEach(s => results.push({ id: s.id, type: 'switch', name: s.name, detail: s.ip, siteId: s.siteId }));
-
-    const foundAPs = await db.select().from(accessPoints).where(
-      or(
-        like(accessPoints.name, lowerQuery),
-        like(accessPoints.ip, lowerQuery),
-        like(accessPoints.mac, lowerQuery)
-      )
-    ).limit(5);
-
-    foundAPs.forEach(s => results.push({ id: s.id, type: 'ap', name: s.name, detail: s.ip, siteId: s.siteId }));
-
     return results;
   }
 
@@ -99,15 +63,28 @@ export class DatabaseStorage implements IStorage {
     const [updated] = await db.update(sites).set(updates).where(eq(sites.id, id)).returning();
     return updated;
   }
-
   async updateSwitch(id: number, updates: Partial<any>): Promise<Switch | undefined> {
     const [updated] = await db.update(switches).set(updates).where(eq(switches.id, id)).returning();
     return updated;
   }
-
   async updateAP(id: number, updates: Partial<any>): Promise<AccessPoint | undefined> {
     const [updated] = await db.update(accessPoints).set(updates).where(eq(accessPoints.id, id)).returning();
     return updated;
+  }
+
+  async deleteSite(id: number): Promise<void> {
+    await db.delete(accessPoints).where(eq(accessPoints.siteId, id));
+    await db.delete(switches).where(eq(switches.siteId, id));
+    await db.delete(sites).where(eq(sites.id, id));
+  }
+
+  async deleteSwitch(id: number): Promise<void> {
+    await db.delete(accessPoints).where(eq(accessPoints.switchId, id));
+    await db.delete(switches).where(eq(switches.id, id));
+  }
+
+  async deleteAP(id: number): Promise<void> {
+    await db.delete(accessPoints).where(eq(accessPoints.id, id));
   }
 }
 

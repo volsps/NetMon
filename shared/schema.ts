@@ -4,7 +4,6 @@ import { z } from "zod";
 import { relations } from "drizzle-orm";
 
 // === TABLE DEFINITIONS ===
-
 export const sites = pgTable("sites", {
   id: serial("id").primaryKey(),
   name: text("name").notNull(),
@@ -80,4 +79,26 @@ export type AccessPoint = typeof accessPoints.$inferSelect;
 export type SiteWithDetails = Site & {
   switches: (Switch & { accessPoints: AccessPoint[] })[];
   accessPoints: AccessPoint[]; // All APs for the site flat list if needed
+};
+// ... (после всех таблиц sites, switches, accessPoints и схем insertSiteSchema)
+
+export const api = {
+  sites: {
+    create: {
+      input: insertSiteSchema,
+    },
+    update: {
+      input: insertSiteSchema.partial(),
+    }
+  },
+  switches: {
+    create: {
+      input: insertSwitchSchema,
+    }
+  },
+  accessPoints: {
+    create: {
+      input: insertAccessPointSchema,
+    }
+  }
 };

@@ -32,6 +32,14 @@ export default defineConfig({
     emptyOutDir: true,
   },
   server: {
+    // --- ВОТ ЭТИ ПАРАМЕТРЫ МЫ ДОБАВЛЯЕМ ---
+    host: "0.0.0.0", 
+    port: 5173,
+    strictPort: true,
+    hmr: {
+      clientPort: 3001, // Чтобы Hot Module Replacement работал через твой внешний порт
+    },
+    // --------------------------------------
     fs: {
       strict: true,
       deny: ["**/.*"],
