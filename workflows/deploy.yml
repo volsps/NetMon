@@ -1,0 +1,24 @@
+name: Deploy NetMon
+
+# Скрипт запускается каждый раз, когда ты делаешь 'git push' в ветку main
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    # Используем твой Runner, который запущен на ВМке
+    runs-on: self-hosted
+
+    steps:
+      # 1. Скачиваем свежий код из репозитория
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Выполняем команды обновления на сервере
+      - name: Update Docker
+        run: |
+          cd /home/ubuntu/network-app
+          git pull origin main
+          docker compose up -d --build
