@@ -8,7 +8,7 @@ async function run() {
   console.log("🚀 Запуск глубокого импорта (OWF/B2B)...");
   
   if (!fs.existsSync("data.csv")) {
-    console.error("❌ Файл data.csv не найден в корневой папке!");
+    console.error("❌ Файл data.csv не найден в корне!");
     process.exit(1);
   }
 
