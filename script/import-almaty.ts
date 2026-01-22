@@ -2,20 +2,8 @@
 import { db } from "../server/db.js";
 import { sites, switches, accessPoints } from "../shared/schema.ts";
 import fs from "fs";
-import path from "path";
 import { parse } from "csv-parse/sync";
-import { eq, and } from "drizzle-orm";
-
-// Таблица соответствия объектов в ASTANA
-const astanaSitesMap: { [key: string]: string } = {
-  "Аэропорт": "09-KRG-OWF-Airport",
-  "ТРЦ Хан-Шатыр": "01-AST-OWF-KhanShatyr",
-  "МегаХолд": "01-AST-OWF-Megahold",
-  "Еуразия": "01-AST-OWF-Eurasiya",
-  "Сарыарка": "01-AST-OWF-Saryarka",
-  "Астана-Арена": "01-AST-OWF-AstanaArena",
-  // Добавьте соответствие для всех объектов
-};
+import { eq, and, like } from "drizzle-orm";
 
 async function importAccessPoints() {
   console.log("🚀 Запуск импорта точек доступа для Астаны...");
@@ -39,7 +27,6 @@ async function importAccessPoints() {
 
   let currentSite = null;
   let siteId = null;
-  let controllerIp = null;
 
   for (const record of records) {
     const objectName = record['Объект / наименование']?.trim();
@@ -50,12 +37,11 @@ async function importAccessPoints() {
 
     // Если это строка с объектом
     if (objectName && !objectName.match(/^\d+/) && !objectName.includes('Контроллер')) {
-      console.log(`\n🏢 Обработка объекта: ${objectName}`);
+      console.log(`\n🏢 Поиск объекта: "${objectName}"`);
       
-      // Ищем соответствующий сайт в базе
-      const siteKey = astanaSitesMap[objectName] || objectName;
+      // Ищем объект в базе ТОЧНО по имени
       const site = await db.query.sites.findFirst({
-        where: eq(sites.name, siteKey)
+        where: eq(sites.name, objectName)
       });
 
       if (site) {
@@ -63,17 +49,16 @@ async function importAccessPoints() {
         siteId = site.id;
         console.log(`✅ Найден объект: ${site.name} (ID: ${site.id})`);
       } else {
-        console.log(`⚠️ Объект не найден: ${objectName}`);
+        console.log(`⚠️ Объект не найден в базе: "${objectName}"`);
         currentSite = null;
         siteId = null;
       }
       continue;
     }
 
-    // Если это строка с контроллером
+    // Пропускаем контроллер
     if (objectName && objectName.toLowerCase().includes('контроллер')) {
-      controllerIp = ipAddress;
-      console.log(`📡 Контроллер: ${controllerIp}`);
+      console.log(`📡 Контроллер: ${ipAddress}`);
       continue;
     }
 
@@ -95,8 +80,7 @@ async function importAccessPoints() {
             const sw = await db.query.switches.findFirst({
               where: and(
                 eq(switches.siteId, siteId),
-                // LIKE по IP в той же подсети
-                // Это нужно будет адаптировать под вашу структуру
+                like(switches.ip, `${subnet}%`)
               )
             });
             if (sw) switchId = sw.id;
