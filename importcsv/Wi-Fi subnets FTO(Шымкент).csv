@@ -1,0 +1,132 @@
+﻿№,Customer,Address,number of AP,Router model,Router IP,Switch IP,Router credentials,AP credential,Controller,Скорректировано,zbx
+1,17-SHM-OWF-Zhibekzholy,,2,hex,10.222.52.2,10.222.52.6,"ubnt
+Handba11!a","admin
+DZ?E$w#YoL",,+,
+2,17-SHM-OWF-17MKR,,4,hex,10.222.226.1,,"ubnt
+Handba11!a",ddma12345,,+,
+3,17-SHM-OWF-11MKR,,2,hex,10.222.226.145,,"ubnt
+Handba11!a",qkTPbh,,+,
+4,17-SHM-OWF-Hyperhouse,,1,hex,10.222.226.129,,,ddma12345,,+,
+5,17-SHM-B2B-Kausar-001,,3,hex,178.20.181.23,,admin Aa123456Aa,,10.31.121.37,+,+
+6,Жети Тандыр  17-SHM-B2B-Expert-food,,3,hex,178.20.181.22,,admin Aa123456Aa,,10.31.121.37,+,-
+8,17-SHM-B2B-Lapsha-Nursat,,2,hex,85.116.191.187,,admin/Aa123456Aa,ubnt/ubnt,10.31.121.37,+,+
+9,17-SHM-OWF-Botanika-PE-001,,9,CCR2004,10.222.52.82,10.222.52.86 .90 .98 .102 .106 .110 .114 .118 .122,"ubnt
+Handba11!a",ddma12345,,+,
+10,"17-SHM-OWF-Sputnik	",,2,,10.222.52.38,10.222.52.42,"ubnt
+Handba11!a",ddma12345,,+,
+11,17-SHM-B2B-Medina,,1,,,91.132.151.110,admin Aa123456Aa,,10.31.121.37,+,-
+12,17-SHM-B2B-7Tandyr-Meirimdi,,3,hEX,"178.20.181.84
+",,admin Aa123456Aa,,,+,-
+13,17-SHM-B2B-7Tandyr-MadeliKozha117,,3,,91.132.151.106,,admin Aa123456Aa,on controller,,недоступен,-
+14,17-SHM-B2B-7TANDYR-ZHELTOKSAN61,желтоксан 61,3+2,,"178.20.181.82
+",,,most unifi,,+,+
+15,17-SHM-B2B-KarataevMomyshuly25-6,,3,,178.20.181.83:9632,,admin/Aa123456Aa,admin,,недоступен,+
+16,17-SHM-B2B-Ashkim,,,,91.132.151.145,,,,,+,+
+17,"17-SHM-OWF-Citadel	",,5,,10.222.52.30,,,ddma12345,,+,
+18,"17-SHM-B2B-7Tandyr-Almatinskaya	",,1,hex,128.127.102.223,,admin/Aa123456Aa,admin,,+,+
+19,17-SHM-OWF-Airport,,33,,91.132.151.153  10.222.52.126,10.222.52.133-10.222.52.140   admin Aa123456Aa,"ubnt
+Handba11!a",ddma12345,,+,
+20,17-SHM-OWF-Akimat,,,,10.222.52.94,"10.222.52.66, 10.222.52.70, 10.222.52.74",,,,+,
+21,17-SHM-B2B-Expert-food ,,,,178.20.181.17,,,,,аутентификация не пускает,-
+22,17-SHM-B2B-Ramadi_Tamerlanovskoe_24/5,,3,heX,91.132.151.239,,admin/Aa123456Aa,Adicom2023@,,+,+
+23,17-SHM-B2B-Madlen-Ryskulova,,2,,91.132.151.45:9632,,admin/Aa123456Aa,Adicom2023@,,+,+
+24,"	17-SHM-B2B-Madlen-ToleBi",,3,,91.132.151.44,,admin/Aa123456Aa,Adicom2023@,,+,+
+25,"	17-SHM-B2B-Madlen-Djangeldina19",,1,,91.132.151.77,,,ddma12345,,+,+
+26,17-SHM-B2BMadlenGroup_Respubliki_6/2,,5,,91.132.151.43 10.222.223.38/30,,admin/Aa123456Aa,,,+,+
+27,17-SHM-B2B-7Tandyr-AitikeBi,Aiteke bi 10 (IP Karataev),2,heX,"178.20.181.159
+",,admin/Aa123456Aa,,,+,-
+28,17-SHM-B2B-MADLEN GROUP_mkr_Nursat_172A,,2,heX,85.116.191.143,,,,,+,-
+29,17-SHM-B2B-IP_Hasenova_Жеті тандыр_Rashidova_26A,,,heX,85.116.191.161,,,,,пропускаю так как нет OPWF,-
+30,"17-SHM-B2B-MirMmorozilnikov_Nursat
+17-SHM-B2B-Tasti.Tiles",,"2
+2",heX,85.116.191.133,,,,,На данной точке 2 OPWF,+
+31,17-SHM-B2B-Bekmetov_Union_toleBi_43/20,"улица Толе Би, 43/20",1,heX,85.116.191.163,,,,,+,+
+32,17-SHM-B2B-AUTOGAS,,1,heX,85.116.191.168,,admin/Aa123456Aa,,,+,+
+33,17-SHM-B2B-AQ Shymkent Hotels,,,,85.116.191.140,,,,,нет хотспота,+
+34,17-SHM-B2B-Fitness_Point_Tolemetova69/42,"Толеметова, 69/42",1,heX,85.116.191.209,,admin/handba11!a,Adicom2023@,,+,-
+35,17-SHYM-OWF-Stadion,,12,RB5009,"91.132.151.116
+10.222.52.146","10.222.52.158, 10.222.52.150, 10.222.52.154",ubnt/Handba11!a,Adicom2023@,,+,
+36,17-SHM-B2B-Jet_Shop_Kozhanova_1/20,"Кожанова, 1/20",2,heX,85.116.191.179,,admin/Aa123456Aa,Adicom2023@,,+,+
+37,17-SHM-B2B-FitnessPoint,"Рыскулова, 22/2",1,heX,85.116.191.206,,admin/Aa123456Aa,Adicom2023@,,+,+
+38,17-SHM-B2B-TechnoMix-Ilyaeva_86,"Иляева, 86",1,heX,85.116.191.229,,admin/Aa123456Aa,Adicom2023@,,+,+
+39,17-SHM-B2B-Atahodzhaev-Abaya-22,Проспект Абая 22,2,heX,85.116.191.242,,admin/Aa123456Aa,Adicom2023@,,+,+
+40,17-SHM-B2B-Morskoi-mir-Turkestanskaya4,"Улица Туркестанская, 4",1,heX,85.116.191.230,,admin/Aa123456Aa,Adicom2023@,,+,+
+41,17-SHM-B2B-BC-Zharkyntau-mkr-turan,"Микрорайон Туран, 2204",2,heX,85.116.191.221,,admin/Aa123456Aa,Adicom2023@,,+,+
+42,17-SHM-B2B-Nikstory-Tamerlonovskoe-shosse34,"Тамерлановское шоссе, 34",2,heX,85.116.191.240,,admin/Aa123456Aa,Adicom2023@,,,+
+43,17-SHM-B2B-Elastik-LTD, улица Туркестанская 6А,1,heX,178.20.181.193,,admin/Aa123456Aa,Adicom2023@,,,-
+44,17-SHM-B2B-Shin-Line-Jibek-joly-88A,"проспект Жибек жолы, 88А",2,heX,178.20.181.169,,admin/Aa123456Aa,Adicom2023@,,,+
+45,17-SHM-B2B-Line-Pac,"Индустриальная зона Тассай Завод,бс-26",1,heX,85.116.191.203,,admin/Aa123456Aa,Adicom2023@,,,+
+46,17-SHM-B2B-DentaFill-kz-Zavod-tassay,Индустриальная зона Тассай Завод,1,heX,85.116.191.202,,admin/Aa123456Aa,Adicom2023@,,,+
+47,17-SHM-B2B-Business-hub-Erimbetova59,"улица Еримбетова, 67",1,heX,85.116.191.165,,admin/handba11!a,Adicom2023@,,,+
+48,17-SHM-B2B-Stroi-Construction,Индустриальная зона Тассай Завод,1,heX,85.116.191.204,,admin/Aa123456Aa,Adicom2023@,,,+
+49,17-SHM-B2B-Alem-Luxury-Tasken-249,"Индустриальная зона Тассай Завод, зд 129",1,heX,85.116.191.250,,admin/Aa123456Aa,Adicom2023@,,,-
+50,17-SHM-B2B-ZhasMedical-Tassay,Индустриальная зона Тассай Завод,1,heX,91.132.151.94,,admin/Handba11!a,Adicom2023@,,,+
+51,17-SHM-B2B-Almaty-premium-motors-Utegenova732,"Утегенова, 732",1,heX,178.20.181.145,,admin/handba11!a,Adicom2023@,,,+
+52,17-SHM-B2B-Business-hub-Erimbetova59,"Еримбетова, 67",1,heX,85.116.191.165,,admin/handba11!a,Adicom2023@,,,+
+53,17-SHM-B2B-Staleprom-Company-Riskulova49,"Торткультобе, 49",1,heX,85.116.191.53,,admin/handba11!a,Adicom2023@,,,+
+54,17-SHM-B2B-Ztravel-Askarova-34b," Асанбая Аскарова, 34Б",1,heX,85.116.191.31,,admin/handba11!a,Adicom2023@,,,+
+55,17-SHM-B2B-Yassi-Group-Askarova-34b," Асанбая Аскарова, 34Б",1,heX,178.20.181.165,,admin/handba11!a,Adicom2023@,,,+
+56,17-SHM-B2B-Ronat-Kazieva-126,"Казиева, 126",1,heX,85.116.191.8,,admin/handba11!a,Adicom2023@,,,+
+57,17-SHM-B2B-Royal-Fitness-Kunaeva-83,"Кунаева, 83",3,heX,85.116.191.29,,admin/handba11!a,Adicom2023@,,,+
+58,17-SHM-B2B-Enina,,,,"10.222.225.38, 85.116.191.115",,admin/handba11!a,Adicom2023@,,,+
+59,17-SHM-B2B-FlyBy_Argynbekova_29/4,Аргынбекова 29/4,2,heX,91.132.151.169,,admin/handba11!a,Adicom2023@,,,+
+60,17-SHM-B2B_Satybaldi_company_Nazarbekova-29/2,Назарбекова 29/2,1,heX,85.116.191.251,,admin/handba11!a,ddma12345,,,+
+61,17-SHM-B2B-Nur-Petrolium, проспект Абая 1А,1,heX,10.222.225.98,,admin/handba11!a,Adicom2023@,,,+
+62,17-SNM-B2B-Beuty-doktora-Zhandosova114,Zhandosova_114/1,1,heX,85.116.191.126,,admin/handba11!a,ddma12345,,,+
+63,17-SHM-B2B-MYAUTOKAZ,4-й микрорайон 4,3,heX,10.222.225.42,,admin/handba11!a,ddma12345,,,+
+64,17-SHM-B2B-Chaihana_Yasmin_Barhatnaya2,Бархатная 2,1,heX,10.222.225.74,,admin/handba11!a,ddma12345,,,+
+65,17-SHM-B2B-IP_Babahan-Qatty-tatty-Nursat2,"микрорайон Нурсат-2, 19",2,heX,91.132.151.233,,admin/handba11!a,Adicom2023@,,,+
+66,17-SHM-B2B-Aspik-LTD-Koigeldi-Batyr95,Койкелде Батыра 95/1,1,heX,85.116.191.210,,admin/handba11!a,Adicom2023@,,,+
+67,17-SHM-B2B-IP-Amanat-Beibitshilik4b,Бейбитшилик 4Б,4,heX,10.222.225.106,,admin/handba11!a,Adicom2023@,,,+
+68,17-SHM-B2B-Phyto_Apipharm_ALFarabi100,улица Аль-Фараби 100,2,heX,10.222.225.34,,admin/handba11!a,ddma12345,,handba11!a,+
+69,17-SHM-B2B-IP_Bakyt_Orynbaeva13,Улица Орынбаева 13,1,heX,94.131.234.90,,admin/handba11!a,ddma12345,,,+
+70,17-SHM-B2B-IP_Narmetov_Zholdasbekova19,Жолдасбекова 19,1,heX,10.222.225.78,,admin/handba11!a,ddma12345,,,+
+71,17-SHM-B2B-The_secret_Kunaeva83,Кунаева 83,1,heX,10.222.225.54,,admin/handba11!a,ddma12345,,,+
+72,17-SHM-B2B-IP-Mirshatova-Pinta-Nazarbaeva961,"проспект Нурсултана Назарбаева, 961",1,heX,10.222.225.94,,admin/handba11!a,Adicom2023@,,,+
+73,17-SHM-B2B-MSClinic-Kunaeva-38A,"проспект Кунаева, 38A",1,heX,91.132.148.251,,admin/handba11!a,Adicom2023@,,,+
+74,17-SHM-B2B-NIKi-Koksai2,"Микрорайон Коксай 2, 412Б/2",1,heX,85.116.191.14,,admin/handba11!a,Adicom2023@,,,+
+75,17-SHM-B2B-RMAuto,Орынбаева 55,1,heX,94.131.234.128,,admin/handba11!a,ddma12345,,,+
+76,17-SHM-B2B-Sattarkhan,Конаева 7/1 ,1,heX,94.131.234.73,,admin/handba11!a,ddma12345,,,+
+77,17-SHM-B2B-MEGAFISH-G-Kunaeva59,"улица Дулати, 139",1,heX,94.131.234.58,,admin/handba11!a,Adicom2023@,,,+
+78,17-SHM-Turan_Kolledj_Baidibekbi32a,Байдибек Би 32А,3,heX,10.222.225.118,,admin/handba11!a,ddma12345,,,+
+79,17-SHM-B2B-Tilashar_Ali_Karagash66,Карлыгаш 66,1,heX,10.222.225.18,,admin/handba11!a,ddma12345,,,+
+81,17-SHM-B2B-US36-IP_Ayazhan_Erimbetova_59,Еримбетова 59,1,heX,94.131.234.127,,admin/handba11!a,ddma12345,,,+
+82,17-SHM-B2B-DS-Villa-Bombini-Kunaeva17/8,"проспект Кунаева, 17/8",2,heX,10.222.225.134,,admin/handba11!a,Adicom2023@,,,+
+83,17-SHM-B2B-BULVAR_Company-Baidibekbi25,Байдыбекби 25,1,heX,10.222.225.130,,admin/handba11!a,ddma12345,,,+
+84,17-SHM-B2B-DS-Mirza-aym-Kozi-korpesh-11/1,Козы Корпеш 11/1,1,heX,10.222.225.174,,admin/handba11!a,Adicom2023@,,,+
+85,17-SHM-B2B-Gauf-Group, Клары Цеткин 159,1,heX,94.131.234.167,,admin/handba11!a,Adicom2023@,,,+
+86,17-SHM-B2B-DS-Sauran-Turan-88b,"микрорайон Туран, 88б",1,heX,94.131.234.158,,admin/handba11!a,Adicom2023@,,,+
+87,17-SHM-B2B-Jet-Logistics-Zhibek-Zholy-64-6,"Жибек жолы, 64/6",2,heX,94.131.234.141,,admin/handba11!a,Adicom2023@,,,+
+88,17-SHM-B2B-NiVaD-LTD-Zhangeldina19-3,"Жангильдина, 19/3",1,heX,91.132.148.187,,admin/handba11!a,Adicom2023@,,,+
+89,17-SHM-B2B TOO_E_APK_Zhetigen11,улица Жетыген 11,2,heX,94.131.234.72,,admin/handba11!a,Adicom2023@,,,+
+90,17-SHM-B2B-Bosjorga-bus-Karatobe,"улица Н. Толеметова, 37",2,heX,94.131.234.203,,admin/handba11!a,Adicom2023@,,,+
+91,17-SHM-B2B-JANYMSOUL,fitne,4,heX,91.132.148.93,,admin/handba11!a,ddma12345,,,+
+92,17-SHM-ENB-Construction-BaidibekBi-1057/1,Абайский район,2,heX,94.131.234.130,,admin/handba11!a,ddma12345,,,+
+93,17-SHM-B2B-ENB-DS_Bakkeldi_Uzinkol46,Узинкол 46,1,heX,94.131.234.192,,admin/handba11!a,Adicom2023@,,,+
+94,17-SHM-B2B-Kolledj-Azimed-Turan-1328,"​Микрорайон Туран, 1328",1,heX,94.131.234.224,,admin/handba11!a,Adicom2023@,,,+
+95,"	17-SHM-B2B-SBA-Store-Erimbetova59","улица Еримбетова, 59",1,heX,94.131.234.254,,admin/handba11!a,Adicom2023@,,,+
+96,17-SHM-B2B-IP-Konakbaev-Kunaeva61,"проспект Кунаева, 61",1,heX,94.131.234.221,,admin/handba11!a,ddma12345,,,+
+97,17-SHM-B2B-Inter-Service-Ospanova76,"улица Шалтай Оспанова, 76",2,heX,94.131.234.200,,admin/handba11!a,Adicom2023@,,,+
+98,17-SHM-B2B-DS-Nursabi-Kurmangazi47,Курмангазы 47,1,heX,94.131.234.193,,admin/handba11!a,Adicom2023@,,,+
+99,17-SHM-B2B-DS-Kazigurt,Акжар 20/1,1,heX,10.222.225.158,,admin/handba11!a,ddma12345,,,+
+100,17-SHM-B2B-Golden-Picture-Azhar-Tamerlanovskoe-19,"Тамерлановское шоссе, 19",2,heX,94.131.234.210,,admin/handba11!a,Adicom2023@,,,-
+101,17-SHM-B2B-DS-Balausa-Nurshuak,"Мкр ​Нуршуак, тупик Жас Отау 17А",1,heX,10.10.10.11/32,,admin/handba11!a,Adicom2023@,,,-
+102,17-SHM-B2B-School-Talant-Nurshak-940a,Нуршуак 940 а,3,heX,94.131.234.242,,admin/handba11!a,Adicom2023@,,,+
+103,17-SHM-B2B-Atameken-Sapasy-Zavod,Tassay инстустральный зона,2,heX,94.131.234.205,,admin/handba11!a,Adicom2023@,,,+
+104,17-SHM-B2B-DS-Balausa-Bobek,Жибек жолы 3/1,1,heX,91.132.148.133,,admin/handba11!a,Adicom2023@,,,+
+105,17-SHM-B2B-ArenaS-Tamerlanovskoe,"Тамерлановское шоссе, 3/5",4,heX,10.222.225.50,,admin/handba11!a,Adicom2023@,,,+
+106,17-SHM-B2B-Orient-service-plus-189-kvartal_25/1,189-й квартал 25/1,3,heX,94.131.234.230,,admin/handba11!a,ddma12345,,,+
+107,17-SHM-OWF-Sayram-Nauryz-Park,,4,heX,10.222.226.145,"10.222.52.162 / admin
+Aa123456Aa","ubnt
+Handba11!a",ubiq,,,-
+108,17-SHM-B2B-IP-TASTI,Тауке хана 223,1,heX,91.132.151.144,,admin/handba11!a,ddma12345,,,+
+109,17-SHM-B2B-DS-Akbota-nur-Shardara4.3,"Шардара, 4",1,heX,94.131.234.160,,admin/handba11!a,Adicom2023@,,,+
+110,17-SHM-OWF-Park-BigTulip,Аллея BIG Tulip,4,heX,10.222.52.2,10.222.52.174,"ubnt
+Handba11!a",ubiq,,,owf
+111,17-SHM-OWF-Park-AlleyaMaterey,,4,heX,10.222.226.129,10.222.52.166,"ubnt
+Handba11!a",ubiq,,,owf
+112,17-SHM-B2B-Tasti-baiterekova98,"Сейдуллы Байтерекова, 98",3,heX,94.131.239.79,,admin/handba11!a,Adicom2023@,,,+
+113,17-SHM-B2B-OilService-Kozhanova-31,Кожанова 31,1,heX,94.131.239.73,,admin/handba11!a,Adicom2023@,,,
+114,17-SHM-B2B-IP-Kattebekov-TD-Zhanet-Baidibekbi61,"проспект Байдибек би, 61",1,heX,94.131.239.84,,admin/handba11!a,Adicom2023@,,,
+115,,,,,,,,,,,
+116,,,,,,,,,,,

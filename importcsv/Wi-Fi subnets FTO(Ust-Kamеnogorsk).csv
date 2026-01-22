@@ -1,0 +1,51 @@
+﻿№,Объект,Адрес роутера,Адреса свитчей,Кол-о АР,Адрес,login,password,switch credentials,,zbx,
+1,"Индивидуальный предприниматель Тескеналы Әлихан Рахатұлы, кафе ""Ote!""",10.216.94.13,,,,,,,недоступен,+,
+2,Абраимова ИП,10.216.69.20,,,,,,,недоступен,-,
+3,16-USK-B2B-Yasin,10.216.65.50 178.20.183.135,,2,,,,,недоступен,+,
+4,Rebroff,10.216.60.40,,,,mehanizator,,,недоступен,+,
+5,CHico,10.216.216.230,,,,,,,недоступен,-,
+6,16-USK-B2B-PortoBella,10.216.253.170,,2,Протозанова 95/1,mehanizator,pEKHX6R@Dn3fK2,,недоступен,+,
+7,16-UKG-B2B-cheburachayaOTE,10.216.252.234,,,,mehanizator,pEKHX6R@Dn3fK2,,недоступен,+,
+8,"16-UKG-B2B-IP-BAKIBAEVA-NADIRA	",10.216.119.4:9632,,,,mehanizator,pEKHX6R@Dn3fK2,,,+,
+,,,,,,,,,,,
+1,16-UKG-B2B-IP-BAKIBAEVA-NADIRA,"10.216.119.4:9632
+85.116.179.54",,2,"Усть-Каменогорск, ул.Красина 8г",mehanizator,pEKHX6R@Dn3fK2,,+,+,
+2,16-UKG-B2B-OskemenTurist-Abaya9,"10.216.119.5
+85.116.179.56",,4,Абая 9,mehanizator,pEKHX6R@Dn3fK2,,+,+,
+3,16-UKG-B2B-IP-ALDABERGENOV-GORKOGO72,"10.216.119.7
+85.116.179.70",,1,"улица Максима Горького, 72/1",mehanizator,pEKHX6R@Dn3fK2,,+,+,
+4,16-UKG-B2B-ELECTRICOFF-NAZARBAEVA85,"85.116.179.78
+10.216.119.12",,1,"проспект Нурсултана Назарбаева, 85",mehanizator,pEKHX6R@Dn3fK2,,,+,
+5,16-UKG-B2B-KUDIYAROV-GVARD-DIVISII-34A,"10.216.119.18
+85.116.179.98",,1,"улица 30-й Гвардейской Дивизии, 34А",mehanizator,pEKHX6R@Dn3fK2,,,+,
+6,16-UKG-B2B-PREMIUM-STROY-KAZAKHSTAN70,"10.216.119.20
+85.116.179.44",,1," улица Казахстан, 70",mehanizator,pEKHX6R@Dn3fK2,,,+,
+7,16-UKG-B2B-IP-ADAMOV-BAZHOVA570,"85.116.179.94
+10.216.96.36",,1,BAZHOVA570,mehanizator,pEKHX6R@Dn3fK2,,,+,
+8,16-UKG-B2B-KOMPANIYA-LIDER-KARLA -LIBKNEHTA-38,"85.116.179.58
+10.216.119.23",,1,ул. Карла Либкнехта 38,mehanizator,pEKHX6R@Dn3fK2,,,+,нет в атласе в слою б2б
+9,16-UKG-B2B-PLASMASCIENCE-GOGOLYA 7G,"10.216.119.22
+85.116.179.124",,2,ул. Гоголя 7г,mehanizator,pEKHX6R@Dn3fK2,,,+,
+10,16-UKG-B2B-EVA-KOVRIK-SATPAEVA-84V,"10.216.119.26
+85.116.179.135",,1,"проспект Каныша Сатпаева, 84В",mehanizator,pEKHX6R@Dn3fK2,,,+,
+11,16-UKG-B2B-IP-KASAINOVA-AUEZOVA16,"10.216.119.25
+85.116.179.130",,1," проспект Ауэзова, 16",mehanizator,pEKHX6R@Dn3fK2,,,+,
+12,16-UKG-B2B-IP-JANKULOV-NAZARBAEVA48,"10.216.119.28, 85.116.179.156",,1,Назарбаева 48,mehanizator,pEKHX6R@Dn3fK2,,,+,
+13,16-UKG-B2B-DIANA-97-NAZARBAEVA49,"10.216.119.12
+85.116.179.143",,1,Назарбаева 49,mehanizator,pEKHX6R@Dn3fK2,,,+,
+14,16-UKG-B2B-IP-Panukov-Egorova-8,"10.216.119.30
+85.116.179.173",,1,Егорова 8/1,mehanizator,pEKHX6R@Dn3fK2,,,+,
+15,16-UKG-B2B-ShayMay-Chehova43,10.216.119.21 85.116.179.93,,1,Чечова 43,mehanizator,pEKHX6R@Dn3fK2,,,+,
+16,16-UKG-B2B-BILYARD-CLUB-IMPERIA-Protozanova17,"10.216.119.31
+85.116.179.177",,1,"улица Протозанова, 17",mehanizator,pEKHX6R@Dn3fK2,,,+,
+17,16-UKG-B2B-AVTOCLEANING-SATPAEVA-51,10.216.119.36,,1,Сатпаев 51,mehanizator,pEKHX6R@Dn3fK2,,,-,
+18,16-UKG-OWF-MAXI-MALL,"10.216.152.198
+10.216.152.197
+45.130.149.70_9636
+10.216.152.214","10.216.152.178
+10.216.152.182",33,"проспект Каныша Сатпаева, 51","advokat
+mehanizator","8SZDB5wuGm
+pEKHX6R@Dn3fK2",,,owf,
+19,,,,,,,,,,,
+20,,,,,,,,,,,
+21,,,,,,,,,,,

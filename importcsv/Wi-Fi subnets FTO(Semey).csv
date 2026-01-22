@@ -1,0 +1,33 @@
+﻿№,Объект,Кол-о АР,Адрес роутера,Адреса свитчей,лог/пароль роутера,лог/пароль точек,,zbx
+1,18-SEM-B2B-CoffeeMan,1,10.253.167.246,,mehanizator,pEKHX6R@Dn3fK2,недоступен,+
+2,18-SEM-B2B-IP-Muhametkaliev,1,10.253.164.158:9632,,mehanizator,pEKHX6R@Dn3fK2,недоступен,-
+3,18-SEM-B2B-F-F-Semey-Momyshuly9,2,"10.253.172.54
+91.132.150.98",,mehanizator,pEKHX6R@Dn3fK2,,+
+4,18-SEM-B2B-Lozhnikova,3,10.253.172.62:9632,,mehanizator,pEKHX6R@Dn3fK2,,+
+5,18-SEM-B2B-IP_Aldabergenov_Sechenova9a-1,2,10.253.172.70,,mehanizator,pEKHX6R@Dn3fK2,,+
+6,18-SEM-B2B-Kollektorskoe-Agence-EKS,4,"91.132.150.112
+10.253.172.74",,mehanizator,pEKHX6R@Dn3fK2,,+
+7,18-SEM-B2B-IRTYSH-MOTORS,2,"91.132.150.122
+10.253.172.78",,mehanizator,pEKHX6R@Dn3fK2,,+
+8,18-SEM-B2B-GAS-MUNAI-Auezova112,1,"10.253.172.82
+91.132.150.123",,mehanizator,pEKHX6R@Dn3fK2,,-
+9,18-SEM-B2B-Semey_Energomontazh_Kabanbay_Batyr_75,1,10.253.172.90,,mehanizator,pEKHX6R@Dn3fK2,,+
+10,18-SEM-OWF-Square-Auezova,5,"10.253.153.6
+128.127.100.237",10.253.153.2,mehanizator,pEKHX6R@Dn3fK2,,owf
+11,18-SEM-OWF-Central-Square,10,"10.253.153.6
+128.127.100.237",10.253.153.10; 10.253.153.11; 10.253.153.12,mehanizator,pEKHX6R@Dn3fK2,,owf
+12,18-SEM-OWF-Zhamakaeva-Park,7,"10.253.153.6
+128.127.100.237","10.253.153.18;
+10.253.153.19",mehanizator,pEKHX6R@Dn3fK2,,
+13,18-SEM-OWF-Central-Park,8,"10.253.153.6
+128.127.100.237","10.253.153.34;
+10.253.153.35",mehanizator,pEKHX6R@Dn3fK2,,
+14,18-SEM-OWF-Arbat,8,"10.253.153.6
+128.127.100.237","10.253.153.26
+10.253.153.30",mehanizator,pEKHX6R@Dn3fK2,,
+15,18-SEM-B2B_ipBaxtino,1,128.127.100.96:9632,,mehanizator,pEKHX6R@Dn3fK2,не пускает,+
+16,,,,,,,,
+17,,,,,,,,
+18,,,,,,,,
+19,,,,,,,,
+,,,,,,,,
